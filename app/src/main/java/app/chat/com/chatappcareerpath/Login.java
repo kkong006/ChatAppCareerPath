@@ -43,11 +43,6 @@ public class Login extends AppCompatActivity {
                     public void onAuthenticated(AuthData authData) {
                         Toast.makeText(Login.this, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider(), Toast.LENGTH_SHORT).show();
 
-                        Firebase userData = new Firebase("https://chatlistandroidlec.firebaseio.com/users/" + authData.getUid());
-                        userData.child("fullname").setValue("Corey Morey");
-                        userData.child("phone number").setValue("911");
-                        userData.child("gender").setValue("anything");
-
                         Intent intent = new Intent( getApplicationContext(), MenuActivity.class);
                         startActivity(intent);
 

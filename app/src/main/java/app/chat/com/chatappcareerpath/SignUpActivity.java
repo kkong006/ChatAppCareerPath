@@ -41,6 +41,9 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Map<String, Object> result) {
                         Toast.makeText(SignUpActivity.this, "Account Successfully Created", Toast.LENGTH_SHORT).show();
+
+                        Firebase userData = new Firebase("https://chatlistandroidlec.firebaseio.com/users/" + result.get("uid"));
+                        userData.child("fullname").setValue(fullnameEditText.getText().toString());
                     }
 
                     @Override
