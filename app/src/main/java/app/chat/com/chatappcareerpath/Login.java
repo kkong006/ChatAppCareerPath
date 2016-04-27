@@ -43,9 +43,6 @@ public class Login extends AppCompatActivity {
                     public void onAuthenticated(AuthData authData) {
                         Toast.makeText(Login.this, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider(), Toast.LENGTH_SHORT).show();
 
-                        Firebase users = new Firebase("https://chatlistandroidlec.firebaseio.com/users");
-                        users.child(authData.getUid()).setValue("blah");
-
                         Firebase userData = new Firebase("https://chatlistandroidlec.firebaseio.com/users/" + authData.getUid());
                         userData.child("fullname").setValue("Corey Morey");
                         userData.child("phone number").setValue("911");

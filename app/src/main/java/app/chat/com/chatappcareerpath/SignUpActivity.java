@@ -40,7 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
                 ref.createUser(emailEditText.getText().toString(), passwordEditText.getText().toString() , new Firebase.ValueResultHandler<Map<String, Object>>() {
                     @Override
                     public void onSuccess(Map<String, Object> result) {
-                        Toast.makeText(SignUpActivity.this, "Account Successfuly Created", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpActivity.this, "Account Successfully Created", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
