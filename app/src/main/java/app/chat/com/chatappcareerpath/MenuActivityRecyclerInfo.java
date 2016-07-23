@@ -1,19 +1,14 @@
 package app.chat.com.chatappcareerpath;
 
 /**
- * Created by sultankhan on 4/27/16.
+ * Created by Karen on 4/27/2016.
  */
 public class MenuActivityRecyclerInfo {
-
     String fullname;
-
-    public MenuActivityRecyclerInfo(String fullname){
+    public MenuActivityRecyclerInfo(String fullname) {
         this.fullname = fullname;
     }
-
-    String getName(){
+    String getName() {
         return fullname;
     }
-
-
 }

@@ -4,17 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 public class MenuActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     MenuActivityRecyclerAdapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,20 +20,29 @@ public class MenuActivity extends AppCompatActivity {
         data.add(new MenuActivityRecyclerInfo("Bob"));
         data.add(new MenuActivityRecyclerInfo("Sandra"));
         data.add(new MenuActivityRecyclerInfo("Bobby"));
-        data.add(new MenuActivityRecyclerInfo("LALALA"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
+        data.add(new MenuActivityRecyclerInfo("John Doe"));
 
 
-        // Inflate Recycler View Object
+        //inflate recyclerview object
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-
-        // Create Adapter
+        //set adapter
         adapter = new MenuActivityRecyclerAdapter(this, data);
 
-        // Set Layout Manager
         recyclerView.setLayoutManager(new LinearLayoutManager(MenuActivity.this));
 
-        // Set Adapter
         recyclerView.setAdapter(adapter);
-
     }
 }
